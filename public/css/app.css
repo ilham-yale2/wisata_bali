@@ -319,7 +319,7 @@ footer .smd{
 
 footer .smd:hover{
 	color: #00FA9A;
-	transform: scale(1.5);
+	transform: scale(1.5) rotate(25deg) translateY(-10px);
 
 }
 

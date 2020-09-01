@@ -29,6 +29,7 @@
             <a class="nav-item nav-link d-inline-block mx-2 hotels" href="{{url('/hotels')}}">Hotels</a>
             <a class="nav-item nav-link d-inline-block mx-2 destinations" href="{{url('/destinations')}}">Destination</a>
             <a class="nav-item nav-link d-inline-block ml-2 disabled" href="{{url('/events')}}">Events</a>
+            <a class="nav-item nav-link d-inline-block ml-2 " href="{{url('/siswa')}}">siswa</a>
           </div>
         </div>
       </div>
@@ -49,7 +50,7 @@
     <footer class="p-5 mt-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3 mb-4">
             <img src="{{url('img/logo.png')}}" class="img-footer">
             <span class="poppins font-weight-bold t-20px text-light">Wisata bali</span>
             <div class="col-12 mt-5 mb-4">
@@ -68,9 +69,9 @@
               <a href="#" class="box-smd"><i class="fab fa-pinterest mx-1 smd t-18px"></i></a>
             </div>
           </div>
-          <div class=" col-md-5 offset-md-1 ">
+          <div class=" col-md-5  offset-md-1 mb-4 ">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-4 col-4">
                 <h5 class="poppins text-light ">
                   Culture Event
                 </h5>
@@ -80,7 +81,7 @@
                   <li class="montserrats t-16px text-light">Tari Barong</li>
                 </ul>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-4 col-4">
                 <h5 class="poppins text-light">
                   Hotel
                 </h5>
@@ -90,7 +91,7 @@
                   <li class="montserrats t-16px text-light">Wapa</li>
                 </ul>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-4 col-4">
                 <h5 class="poppins text-light">
                   Destination
                 </h5>
@@ -123,7 +124,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-     <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
+    <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>

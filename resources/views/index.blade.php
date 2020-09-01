@@ -100,7 +100,7 @@
         </div>
         <div class="col-md-12 mt-5 ">
           <div class="row">
-            <div class="col-md-4 mb-5 list-destination"> 
+            <div class="col-md-4 col-6 mb-5 list-destination"> 
               <div class="card-destination card ">
                   <div class="thumb">
                       <img src="{{url('img/lot.jpg')}}" alt="" class="img-destination w-100">
@@ -128,7 +128,7 @@
                   </div>
               </div> 
             </div>
-            <div class="col-md-4 mb-5 list-destination"> 
+            <div class="col-md-4 col-6 mb-5 list-destination"> 
               <div class="card-destination card ">
                   <div class="thumb">
                       <img src="{{url('img/pandawa.png')}}" alt="" class="img-destination w-100">
@@ -156,7 +156,7 @@
                   </div>
               </div> 
             </div>
-            <div class="col-md-4 mb-5 list-destination"> 
+            <div class="col-md-4 col-6 mb-5 list-destination"> 
               <div class="card-destination card ">
                   <div class="thumb">
                       <img src="{{url('img/pantai-uluwatu-bali.jpg')}}" alt="" class="img-destination w-100">
@@ -184,7 +184,7 @@
                   </div>
               </div> 
             </div>
-            <div class="col-md-4 mb-5 list-destination"> 
+            <div class="col-md-4 col-6 mb-5 list-destination"> 
               <div class="card-destination card ">
                   <div class="thumb">
                       <img src="{{url('img/Air-Terjun-Sekumpul-Sawan-Buleleng-Bali.jpg')}}" alt="" class="img-destination w-100">
@@ -212,7 +212,7 @@
                   </div>
               </div> 
             </div>
-            <div class="col-md-4 mb-5 list-destination"> 
+            <div class="col-md-4 col-6 mb-5 list-destination"> 
               <div class="card-destination card ">
                   <div class="thumb">
                       <img src="{{url('img/bukit-campuhan.jpg')}}" alt="" class="img-destination w-100">
@@ -240,7 +240,7 @@
                   </div>
               </div> 
             </div>
-            <div class="col-md-4 mb-5 list-destination"> 
+            <div class="col-md-4 col-6 mb-5 list-destination"> 
               <div class="card-destination card ">
                   <div class="thumb">
                       <img src="{{url('img/bedugul.jpg')}}" alt="" class="img-destination w-100">
@@ -248,7 +248,7 @@
                   </div>
                   <div class="place_info col-12 bg-light py-4 px-3">
                       <a href="#" class="text-decoration-none">
-                        <h3 class="poppins font-weight-bold place-name">Tanah Lot</h3>
+                        <h3 class="poppins font-weight-bold place-name">Bedugul</h3>
                       </a>
                       <p class="montserrats">Tabanan, Bali</p>
                       <div class="rating_destination d-flex justify-content-between">
@@ -294,7 +294,7 @@
     </div>
     <div class="container new-section">
      <div class="row">
-       <div class="col-md-7" style="left: -150px;">
+       <div class="col-md-7 mb-4" style="left: -150px;">
           <div id="carousel-img" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carousel-img" data-slide-to="0" class="active"></li>
@@ -325,7 +325,7 @@
        <div class="col-md-5">
          <h1 class="poppins font-weight-bold">Hotels</h1>
          <div class="row mt-5">
-            <div class="col-md-6 mb-5 "> 
+            <div class="col-md-6 mb-5 col-6 "> 
               <div class="card card-hotel w-100">
                 <div class="thumb-hotel">
                   <img class="card-img-top hotels-img" src="{{url('img/Four-Seasons-Resort-Bali-p.webp')}}" alt="Card image cap">
@@ -344,7 +344,7 @@
                 </div>
               </div> 
             </div>
-            <div class="col-md-6 mb-5 "> 
+            <div class="col-md-6 mb-5 col-6 "> 
               <div class="card card-hotel w-100">
                 <div class="thumb-hotel">
                   <img class="card-img-top hotels-img" src="{{url('img/katamama-hotel-bali-p.webp')}}" alt="Card image cap">
@@ -363,7 +363,7 @@
                 </div>
               </div> 
             </div>
-            <div class="col-md-6 mb-5 "> 
+            <div class="col-md-6 mb-5 col-6 "> 
               <div class="card card-hotel w-100">
                 <div class="thumb-hotel">
                   <img class="card-img-top hotels-img" src="{{url('img/the-bulgari-indonesia.webp')}}" alt="Card image cap">
@@ -382,7 +382,7 @@
                 </div>
               </div> 
             </div>
-            <div class="col-md-6 mb-5 "> 
+            <div class="col-md-6 mb-5 col-6 "> 
               <div class="card card-hotel w-100">
                 <div class="thumb-hotel">
                   <img class="card-img-top hotels-img" src="{{url('img/wapa-di-ume-sidemen-bali-indonesia-p.webp')}}" alt="Card image cap">

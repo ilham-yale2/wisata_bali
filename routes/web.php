@@ -26,3 +26,10 @@ Route::get('/hotels', function () {
 Route::get('/destinations', function () {
     return view('destinations') ;
 });
+
+//siswa
+Route::get('/siswa','SiswaController@index');
+
+//jurusan
+Route::get('/jurusan','JurusanController@index');
+
