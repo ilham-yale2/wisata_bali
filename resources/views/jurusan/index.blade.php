@@ -12,7 +12,7 @@
                     <tr>
                         <th scope="col" width="5%">#</th>
                         <th scope="col">Nama Jurusan</th>
-                        <th scope="col">Created at</th>
+                        <th scope="col">Prodi</th>
                         <th scope="col" width="10%">Action</th>
                     </tr>
                 </thead>
