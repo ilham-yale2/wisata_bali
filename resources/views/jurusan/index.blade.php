@@ -21,7 +21,7 @@
                     <tr class="border-bottom">
                         <th scope="row">{{ $loop->iteration }}</th>
                         <td>{{ $jrs->nama_jurusan }}</td>
-                        <td>{{ $jrs->created_at }}</td>
+                        <td>{{ $jrs->prodi }}</td>
                         <td class="justify-content-center">
                             <a href="#" class="badge badge-success"><i class="fas fa-pencil-alt"></i></a> | 
                             <a href="#" class="badge badge-danger"><i class="fas fa-trash-alt"></i></a>
