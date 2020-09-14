@@ -28,7 +28,12 @@ Route::get('/destinations', function () {
 });
 
 //siswa
+Route::get('/dataStudents','SiswaController@dataStudents');
 Route::get('/siswa','SiswaController@index');
+Route::patch('/siswa/{siswa}','SiswaController@edit');
+Route::put('/siswa/{siswa}','SiswaController@update');
+Route::delete('/siswa/{siswa}','SiswaController@destroy');
+Route::post('/siswa','SiswaController@store');
 
 //jurusan
 Route::get('/jurusan','JurusanController@index');

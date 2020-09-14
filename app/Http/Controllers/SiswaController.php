@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Student;
+use App\Jurusan;
+use Illuminate\Http\Request;
+use App\Http\Requests\ErrorFormRequest;
 
 class SiswaController extends Controller
 {
@@ -14,10 +16,10 @@ class SiswaController extends Controller
      */
     public function index()
     {
-        $students = Student::all();
-        return view('siswa.index',compact('students'));
+        $jurusan = Jurusan::all();
+        return view('siswa.index',compact('jurusan'));
     }
-
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -34,9 +36,9 @@ class SiswaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ErrorFormRequest $request)
     {
-        //
+       Student::create($request->all());
     }
 
     /**
@@ -58,7 +60,8 @@ class SiswaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $student = Student::find($id);
+        return compact('student') ;
     }
 
     /**
@@ -68,9 +71,17 @@ class SiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ErrorFormRequest $request,Student $student)
     {
-        //
+        Student::where('id', $request->id)
+            ->update([
+                'nama' => $request->nama,
+                'nisn' => $request->nisn,
+                'jurusan' => $request->jurusan,
+                'email' => $request->email,
+            ]);
+
+        
     }
 
     /**
@@ -81,6 +92,13 @@ class SiswaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Student::find($id)->delete();
     }
+
+    // load data 
+    public function dataStudents(){
+        
+        $students = Student::all();
+        return view('siswa.dataStudents',compact('students'));
+    }   
 }
