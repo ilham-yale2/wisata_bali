@@ -36,5 +36,10 @@ Route::delete('/siswa/{siswa}','SiswaController@destroy');
 Route::post('/siswa','SiswaController@store');
 
 //jurusan
+Route::get('/dataJurusan','JurusanController@dataJurusan');
 Route::get('/jurusan','JurusanController@index');
+Route::post('/jurusan','JurusanController@store');
+Route::patch('/jurusan/{jurusan}','JurusanController@edit');
+Route::put('/jurusan/{jurusan}','JurusanController@update');
+Route::delete('/jurusan/{jurusan}','JurusanController@destroy');
 

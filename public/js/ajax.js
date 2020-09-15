@@ -8,10 +8,13 @@ function resetData() {
     $('#nama').val('');
     $('#email').val('');
     $('#nisn').val('');
+    $('#jurusan option').removeAttr("selected");
+    $('#disabled option').attr("selected", "selected");
 }
 
 $(document).ready(function () {
     loadData();
+    resetData();
     $('.data-panel').show();
     $('.data-form').hide();
 
@@ -55,7 +58,7 @@ function deleteData(id) {
             });
 
             $.ajax({
-                url: 'siswa/' + id,
+                url: "{{url('/siswa')}}/" + id,
                 type: 'POST',
                 data: {
                     _token: token,
@@ -77,11 +80,10 @@ function deleteData(id) {
     })
 }
 
-$('#btn-save').click(function (event) {
-    event.preventDefault();
-
+$('#btn-save').click(function () {
+    
     var form = $('#formData'),
-        url = form.attr('action'),
+        url = "{{url('/siswa')}}",
         method = 'POST',
         token = $('input[name=_token').val();
 
@@ -103,6 +105,7 @@ $('#btn-save').click(function (event) {
             $('.data-form').hide();
             resetData();
             loadData();
+            $('#disabled-option').attr("selected", "selected");
             Swal.fire('Data Siswa', 'Berhasil Ditambahkan', 'success');
         },
         error: function (xhr) {
@@ -122,7 +125,7 @@ $('#btn-save').click(function (event) {
 
 function editData(id) {
 
-    var url = 'siswa/' + id,
+    var url = "{{url('/siswa')}}/" + id,
         method = 'PATCH',
         token = $('input[name=_token').val();
     $.ajaxSetup({
@@ -152,7 +155,7 @@ function editData(id) {
 
 function updateData() {
     var id = $('#id').val();
-    var url = 'siswa/' + id,
+    var url = "{{url('/siswa')}}/" + id,
         method = 'PUT',
         token = $('input[name=_token').val(),
         form = $('#formData');

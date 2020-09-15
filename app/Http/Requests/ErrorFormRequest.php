@@ -26,7 +26,7 @@ class ErrorFormRequest extends FormRequest
     {
         return [
             'nama' =>'required|string',
-            'nisn' => 'integer',
+            'nisn' => 'required|size:10',
             'email' => 'required|email',
             'jurusan' => 'required'
         ]; 
@@ -36,13 +36,11 @@ class ErrorFormRequest extends FormRequest
     {
         return [
             'nama.required' => 'Nama harus di isi',
-            'nama.string' => 'Nama tidak boleh mengandung angka',
             'nisn.required'  => 'Nisn harus di isi',
             'nisn.size'  => 'Nisn harus di isi 10 digit',
-            'nisn.integer'  => 'Nisn harus di isi  angka',
             'email.required'  => 'Email harus di isi',
             'email.email'  => 'Email tidak valid',
-            'jurusan.required'  => 'Jurusan harus di isi',
+            'jurusan.required'  => 'Pilih Jurusan',
 
         ];
     }

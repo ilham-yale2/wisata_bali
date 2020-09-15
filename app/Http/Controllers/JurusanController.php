@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Jurusan;
+use App\Http\Requests\JurusanValidate;
 
 class JurusanController extends Controller
 {
@@ -26,7 +27,7 @@ class JurusanController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -35,9 +36,9 @@ class JurusanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(JurusanValidate $request)
     {
-        //
+        Jurusan::create($request->all());
     }
 
     /**
@@ -59,7 +60,8 @@ class JurusanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $jurusan = Jurusan::find($id);
+        return compact('jurusan') ;
     }
 
     /**
@@ -69,9 +71,13 @@ class JurusanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(JurusanValidate $request, $id)
     {
-        //
+        Jurusan::where('id', $request->id)
+            ->update([
+                'nama_jurusan' => $request->nama_jurusan,
+                'prodi' => $request->prodi,
+            ]);
     }
 
     /**
@@ -82,6 +88,12 @@ class JurusanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Jurusan::find($id)->delete();
     }
+
+    public function datajurusan(){
+        
+        $jurusan = Jurusan::all();
+        return view('jurusan.dataJurusan',compact('jurusan'));
+    } 
 }
